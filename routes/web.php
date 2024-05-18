@@ -1,6 +1,7 @@
 <?php
 
 use App\Http\Controllers\FileUploadController;
+use App\Http\Controllers\UploadImageController;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -20,3 +21,6 @@ Route::get('/', function () {
 
 Route::get('/file-upload', [FileUploadController::class, 'fileUpload']);
 Route::post('/file-upload', [FileUploadController::class, 'prosesFileUpload']);
+
+Route::get('/form-upload', [UploadImageController::class, 'form_index']);
+Route::post('/form-upload', [UploadImageController::class, 'prosesUpload']);
